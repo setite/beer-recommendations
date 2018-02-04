@@ -1,0 +1,91 @@
+Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	1518829 obs. of  6 variables:
+ $ review_overall   : num  1.5 3 3 3 4 3 3.5 3 4 4.5 ...
+ $ review_aroma     : num  2 2.5 2.5 3 4.5 3.5 3.5 2.5 3 3.5 ...
+ $ review_appearance: num  2.5 3 3 3.5 4 3.5 3.5 3.5 3.5 5 ...
+ $ review_palate    : num  1.5 3 3 2.5 4 3 4 2 3.5 4 ...
+ $ review_taste     : num  1.5 3 3 3 4.5 3.5 4 3.5 4 4 ...
+ $ beer_abv         : num  5 6.2 6.5 5 7.7 4.7 4.7 4.7 4.7 4.7 ...
+ review_overall   review_aroma   review_appearance review_palate    review_taste      beer_abv     
+ Min.   :0.000   Min.   :1.000   Min.   :0.00      Min.   :1.000   Min.   :1.000   Min.   : 0.010  
+ 1st Qu.:3.500   1st Qu.:3.500   1st Qu.:3.50      1st Qu.:3.500   1st Qu.:3.500   1st Qu.: 5.200  
+ Median :4.000   Median :4.000   Median :4.00      Median :4.000   Median :4.000   Median : 6.500  
+ Mean   :3.824   Mean   :3.746   Mean   :3.85      Mean   :3.754   Mean   :3.804   Mean   : 7.042  
+ 3rd Qu.:4.500   3rd Qu.:4.000   3rd Qu.:4.00      3rd Qu.:4.000   3rd Qu.:4.500   3rd Qu.: 8.500  
+ Max.   :5.000   Max.   :5.000   Max.   :5.00      Max.   :5.000   Max.   :5.000   Max.   :57.700  
+
+Reliability analysis   
+Call: alpha(x = beer_df_core[c(3:5, 7:8, 10)])
+
+  raw_alpha std.alpha G6(smc) average_r S/N   ase mean   sd
+      0.68      0.86    0.87      0.51 6.2 4e-04  4.3 0.71
+
+ lower alpha upper     95% confidence boundaries
+0.68 0.68 0.68 
+
+ Reliability if an item is dropped:
+                  raw_alpha std.alpha G6(smc) average_r S/N alpha se
+review_overall         0.62      0.83    0.82      0.49 4.8  0.00044
+review_aroma           0.60      0.82    0.83      0.48 4.6  0.00048
+review_appearance      0.63      0.84    0.85      0.52 5.4  0.00045
+review_palate          0.60      0.82    0.82      0.47 4.5  0.00047
+review_taste           0.59      0.81    0.80      0.46 4.2  0.00048
+beer_abv               0.90      0.90    0.88      0.63 8.6  0.00013
+
+ Item statistics 
+                        n raw.r std.r r.cor r.drop mean   sd
+review_overall    1518829  0.67  0.81  0.79   0.55  3.8 0.72
+review_aroma      1518829  0.75  0.83  0.79   0.67  3.7 0.70
+review_appearance 1518829  0.65  0.74  0.66   0.55  3.9 0.61
+review_palate     1518829  0.74  0.84  0.82   0.66  3.8 0.68
+review_taste      1518829  0.78  0.88  0.89   0.69  3.8 0.73
+beer_abv          1518829  0.76  0.50  0.34   0.31  7.0 2.32
+Omega 
+Call: omega(m = beer_df_core[c(3:5, 7:8, 10)], nfactors = 3)
+Alpha:                 0.86 
+G.6:                   0.87 
+Omega Hierarchical:    0.63 
+Omega H asymptotic:    0.68 
+Omega Total            0.92 
+
+Schmid Leiman Factor loadings greater than  0.2 
+                     g   F1*   F2*   F3*   h2   u2   p2
+review_overall    0.60  0.68             0.85 0.15 0.42
+review_aroma      0.62  0.42        0.25 0.63 0.37 0.62
+review_appearance 0.84        0.54       1.00 0.00 0.71
+review_palate     0.63  0.49             0.65 0.35 0.61
+review_taste      0.66  0.62             0.84 0.16 0.52
+beer_abv          0.30              0.47 0.32 0.68 0.29
+
+With eigenvalues of:
+   g  F1*  F2*  F3* 
+2.37 1.27 0.30 0.35 
+
+general/max  1.87   max/min =   4.2
+mean percent general =  0.53    with sd =  0.15 and cv of  0.29 
+Explained Common Variance of the general factor =  0.55 
+
+The degrees of freedom are 0  and the fit is  0.01 
+The number of observations was  1518829  with Chi Square =  11292.61  with prob <  NA
+The root mean square of the residuals is  0.01 
+The df corrected root mean square of the residuals is  NA
+
+Compare this with the adequacy of just a general factor and no group factors
+The degrees of freedom for just the general factor are 9  and the fit is  1.02 
+The number of observations was  1518829  with Chi Square =  1543513  with prob <  0
+The root mean square of the residuals is  0.2 
+The df corrected root mean square of the residuals is  0.26 
+
+RMSEA index =  0.336  and the 10 % confidence intervals are  0.336 0.336
+BIC =  1543385 
+
+Measures of factor score adequacy             
+                                                 g  F1*   F2*   F3*
+Correlation of scores with factors            0.88 0.84  0.66  0.67
+Multiple R square of scores with factors      0.77 0.70  0.44  0.45
+Minimum correlation of factor score estimates 0.54 0.40 -0.12 -0.10
+
+ Total, General and Subset omega for each subset
+                                                 g  F1*  F2*  F3*
+Omega total for total scores and subscales    0.92 0.91 1.00 0.32
+Omega general for total scores and subscales  0.63 0.51 0.70 0.09
+Omega group for total scores and subscales    0.25 0.40 0.29 0.22
